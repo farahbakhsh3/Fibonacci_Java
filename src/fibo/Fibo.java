@@ -2,26 +2,24 @@ package fibo;
 
 import java.util.Scanner;
 
-public class Fibo {
-
-    static long fibonachi(int n) {
-        if ((n == 0) || (n == 1)) {
-            return 1;
-        }
-
-        return fibonachi(n - 1) + fibonachi(n - 2);
-    }
-
+public class Fibo {    
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
-        System.out.print("Input n: ");
-        int n = input.nextInt();
+        Fibonachi fibonachi = new Fibonachi();
 
-        if (n < 0) {
-            System.err.print("Wrong n.");
-            return;
-        }
-        System.out.format("fibonachi(%d) = %d\n", n, fibonachi(n));
+        int n = 50;
+
+        long beginTime = System.currentTimeMillis();
+        long fibo = fibonachi.fibonachi_standard(n);
+        long endTime = System.currentTimeMillis();
+        long delta = endTime - beginTime;
+        System.out.println("Standard mode :: F(" + n + ") = " + fibo + " ... computed     in " + delta + " milliseconds");
+        
+        
+        beginTime = System.currentTimeMillis();
+        fibo = fibonachi.fibonachi_optimized(n);
+        endTime = System.currentTimeMillis();
+        delta = endTime - beginTime;
+        System.out.println("Optimized mode :: F(" + n + ") = " + fibo + " ... computed     in " + delta + " milliseconds");
     }
 }
