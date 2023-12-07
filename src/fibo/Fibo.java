@@ -6,7 +6,7 @@ public class Fibo {
 
         Fibonacci fibonacci = new Fibonacci();
 
-        int n = 10;
+        int n = 55;
 
         long beginTime = System.currentTimeMillis();
         long fibo = fibonacci.fibonacci_standard(n);
