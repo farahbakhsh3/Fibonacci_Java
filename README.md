@@ -1,2 +1,2 @@
-# Fibonachi_Java
-A recursive alg of Fibonachi implemented in Java.
+# Fibonacci_Java
+A recursive alg of Fibonacci implemented in Java.
